@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Board</class>
+ <widget class="QMainWindow" name="Board">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1307</width>
+    <height>956</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	
+	border-image: url(:/new/prefix1/3d.png);
+
+
+
+}
+QPushButton:hover{
+	
+	
+	
+	
+	
+	border-image: url(:/new/prefix1/3d_hover.png);
+	
+}
+
+QPushButton:checked{
+	
+	
+	
+	
+	border-image: url(:/new/prefix1/3d_press.png);
+	
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	
+	border-image: url(:/new/prefix1/bs.png);
+
+
+
+}
+QPushButton:hover{
+	
+	
+	
+	
+	
+	border-image: url(:/new/prefix1/bs_hover.png);
+	
+}
+
+QPushButton:checked{
+	
+	
+	
+	border-image: url(:/new/prefix1/bs_press.png);
+	
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+border-image: url(:/new/prefix1/pencil.png);
+
+
+
+}
+QPushButton:hover{
+	
+	
+	border-image: url(:/new/prefix1/pencil_hover.png);
+	
+}
+
+QPushButton:checked{
+	
+	
+	border-image: url(:/new/prefix1/pencil_press.png);
+	
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	
+	border-image: url(:/new/prefix1/brush.png);
+
+
+
+}
+QPushButton:hover{
+	
+	
+	
+	
+	
+	border-image: url(:/new/prefix1/brush_hover.png);
+	
+}
+
+QPushButton:checked{
+	
+	
+	
+	
+	
+	border-image: url(:/new/prefix1/brush_press.png);
+	
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	border-image: url(:/new/prefix1/bit.png);
+
+
+
+}
+QPushButton:hover{
+	
+	
+	
+	
+	border-image: url(:/new/prefix1/bit_hover.png);
+	
+}
+
+QPushButton:checked{
+	
+	
+	
+	border-image: url(:/new/prefix1/bit_press.png);
+	
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	
+	border-image: url(:/new/prefix1/square.png);
+
+
+
+}
+QPushButton:hover{
+	
+	
+	
+	
+	border-image: url(:/new/prefix1/square_hover.png);
+	
+}
+
+QPushButton:checked{
+	
+	
+	
+	
+	border-image: url(:/new/prefix1/square_press.png);
+	
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	border-image: url(:/new/prefix1/claer.png);
+
+
+
+}
+QPushButton:hover{
+	
+	
+	
+	border-image: url(:/new/prefix1/clear_hover.png);
+	
+}
+
+QPushButton:press{
+	
+	
+	border-image: url(:/new/prefix1/clear_press.png);
+	
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	
+	border-image: url(:/new/prefix1/make3d.png);
+
+
+
+}
+QPushButton:hover{
+	
+	
+	
+	
+	border-image: url(:/new/prefix1/makesd_press.png);
+	
+}
+
+QPushButton:checked{
+	
+	
+	
+	border-image: url(:/new/prefix1/makesd_press.png);
+	
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	
+	
+	border-image: url(:/new/prefix1/light_press.png);
+
+
+
+}
+QPushButton:hover{
+	
+	
+	
+	
+	
+	border-image: url(:/new/prefix1/light.png);
+	
+}
+
+QPushButton:checked{
+	
+	
+	
+	
+	border-image: url(:/new/prefix1/light.png);
+	
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_11">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	
+	border-image: url(:/new/prefix1/text.png);
+
+
+
+}
+QPushButton:hover{
+	
+	
+	
+	
+	border-image: url(:/new/prefix1/text_hover.png);
+	
+}
+
+QPushButton:checked{
+	
+	
+	
+	border-image: url(:/new/prefix1/text_press.png);
+	
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="minimumSize">
+        <size>
+         <width>75</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_12">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	
+	border-image: url(:/new/prefix1/save.png);
+
+
+
+}
+QPushButton:hover{
+	
+	
+	
+	
+	border-image: url(:/new/prefix1/save_press.png);
+	
+}
+
+QPushButton:press{
+	
+	
+	border-image: url(:/new/prefix1/save_press.png);
+	
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="Openglwidget" name="widget" native="true"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1307</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Openglwidget</class>
+   <extends>QWidget</extends>
+   <header location="global">Openglwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

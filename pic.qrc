@@ -1,0 +1,37 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>main.jpg</file>
+        <file>icon23.ico</file>
+        <file>1.bmp</file>
+        <file>pencil_press.png</file>
+        <file>pencil.png</file>
+        <file>pencil_hover.png</file>
+        <file>bit.png</file>
+        <file>bit_hover.png</file>
+        <file>bit_press.png</file>
+        <file>3d.png</file>
+        <file>3d_hover.png</file>
+        <file>3d_press.png</file>
+        <file>bs.png</file>
+        <file>bs_hover.png</file>
+        <file>bs_press.png</file>
+        <file>square.png</file>
+        <file>square_hover.png</file>
+        <file>square_press.png</file>
+        <file>brush.png</file>
+        <file>brush_hover.png</file>
+        <file>brush_press.png</file>
+        <file>claer.png</file>
+        <file>clear_hover.png</file>
+        <file>clear_press.png</file>
+        <file>save.png</file>
+        <file>save_press.png</file>
+        <file>make3d.png</file>
+        <file>makesd_press.png</file>
+        <file>light.png</file>
+        <file>light_press.png</file>
+        <file>text.png</file>
+        <file>text_hover.png</file>
+        <file>text_press.png</file>
+    </qresource>
+</RCC>
