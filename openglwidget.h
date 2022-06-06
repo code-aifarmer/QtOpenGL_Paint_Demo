@@ -112,8 +112,6 @@ protected:
     void wheelEvent(QWheelEvent *event);
     void draw(v v1);
 public slots:
-    void keyPressEvent(QKeyEvent *event);
-    void keyReleaseEvent(QKeyEvent *event);
     void drawCube();
     //void loadGLTextures();
 };
