@@ -23,7 +23,7 @@ Openglwidget::Openglwidget(QWidget *parent) :
     QPainter painter(this);
     painter.setCompositionMode(QPainter::CompositionMode::CompositionMode_Source);
      painter.fillRect(this->rect(), QColor(1, 1, 1, 1));
-    //setWindowOpacity(1.0); //设置widget窗体透明度
+    //setWindowOpacity(1.0); 
      rotate_angle2 = 0.0;
 }
 
@@ -46,9 +46,7 @@ void Openglwidget::initializeGL()
     glLightfv(GL_LIGHT0,GL_SPECULAR,_specular);
     glLightfv(GL_LIGHT0,GL_POSITION,_position);
     glEnable(GL_TEXTURE_3D);
-    glEnable(GL_LIGHTING);//改色
-//    glEnable( GL_COLOR_MATERIAL );
-//    glLightModeli( GL_FRONT, GL_AMBIENT_AND_DIFFUSE );// 这个表示模型的正面接受环境光和散射光，你可以修改这两个参数
+    glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     glEnable(GL_LINE_SMOOTH);
     glEnable(GL_DEPTH_TEST);
@@ -69,11 +67,9 @@ void Openglwidget::initializeGL()
 
            //glPointSize(5.0);
            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-           glMatrixMode(GL_PROJECTION); // 设定合适的矩阵
-           glLoadIdentity(); // 是一个无参的无值函数，其功能是用一个4×4的单位矩阵来替换当前矩阵，实际上就是对当前矩阵进行初始化。也就是说，无论以前进行了多少次矩阵变换，在该命令执行后，当前矩阵均恢复成一个单位矩阵，即相当于没有进行任何矩阵变换状态
+           glMatrixMode(GL_PROJECTION); 
+           glLoadIdentity(); 
            gluOrtho2D(0.0, this->width(), 0.0, this->height());
-
-          // gluLookAt(20.0f, 5.0f, 10.0f, 0.0f, 0.0f, 0.0f, 5.0f, 1.0f, 0.0f);
 
 
 }
@@ -150,11 +146,9 @@ void RenderBone(float x0, float y0, float z0, float x1, float y1, float z1 )
         dir_x,  dir_y,  dir_z,  0.0,
         0.0,    0.0,    0.0,    1.0 };
     glMultMatrixd( m );
-    // 圆柱体参数
     GLdouble radius= 0.1;		// 半径
     GLdouble slices = 10.0;		//	段数
     GLdouble stack = 3.0;		// 递归次数
-//    glColor3f(63/255, 72/255, 204/255);
     glLightModeli( GL_FRONT, GL_AMBIENT_AND_DIFFUSE );// 正面接受环境光和散射光
     glEnable( GL_COLOR_MATERIAL );
     glColor3f(63.0/255.0, 72.0/255.0, 204.0/255.0);
@@ -229,21 +223,19 @@ void Openglwidget::paintGL()
 
        glLightfv (GL_LIGHT0, GL_POSITION, position);
        glLightfv(GL_LIGHT0, GL_POSITION, position);
-          glLightfv(GL_LIGHT0, GL_DIFFUSE, white_light);   //散射光属性
-          glLightfv(GL_LIGHT0, GL_SPECULAR, white_light);  //镜面反射光
-          glLightModelfv(GL_LIGHT_MODEL_AMBIENT, Light_Model_Ambient);  //环境光参数
+          glLightfv(GL_LIGHT0, GL_DIFFUSE, white_light);   
+          glLightfv(GL_LIGHT0, GL_SPECULAR, white_light);  
+          glLightModelfv(GL_LIGHT_MODEL_AMBIENT, Light_Model_Ambient); 
 
-          glEnable(GL_LIGHTING);   //开关:使用光
-          glEnable(GL_LIGHT0);     //打开0#灯
-          glEnable(GL_DEPTH_TEST); //打开深度测试
+          glEnable(GL_LIGHTING);   
+          glEnable(GL_LIGHT0);    
+          glEnable(GL_DEPTH_TEST); 
     }
 
 
-    glLightModeli( GL_FRONT, GL_AMBIENT_AND_DIFFUSE );// 这个表示模型的正面接受环境光和散射光，你可以修改这两个参数
+    glLightModeli( GL_FRONT, GL_AMBIENT_AND_DIFFUSE );
     glEnable( GL_COLOR_MATERIAL );
 //    qDebug()<<"!!!!"<<tool_a<<" "<<tool;
-
-      //glClear(GL_COLOR_BUFFER_BIT);
       glLoadIdentity();
       if(tool_a==1||vv.size()!=0){
           if(to_3d==1){
@@ -345,7 +337,7 @@ void Openglwidget::paintGL()
         glEnd();
       }
       if(tool_b==1||vvv.size()!=0){
-          glLightModeli( GL_FRONT, GL_AMBIENT_AND_DIFFUSE );// 这个表示模型的正面接受环境光和散射光，你可以修改这两个参数
+          glLightModeli( GL_FRONT, GL_AMBIENT_AND_DIFFUSE );
           glEnable( GL_COLOR_MATERIAL );
           if(to_3d==1){
          glRotatef(rotate_angle2, 0.0,0.4, 0.0);
@@ -546,7 +538,7 @@ void Openglwidget::paintGL()
       }
 
 if(tool_d==1)
-{  glLightModeli( GL_FRONT, GL_AMBIENT_AND_DIFFUSE );// 这个表示模型的正面接受环境光和散射光，你可以修改这两个参数
+{  glLightModeli( GL_FRONT, GL_AMBIENT_AND_DIFFUSE );
     glEnable( GL_COLOR_MATERIAL );
     if(to_3d==1){
    glRotatef(rotate_angle2, 0.0,0.4, 0.0);
@@ -887,19 +879,8 @@ void Openglwidget::mousePressEvent(QMouseEvent *ev)
         bei_num++;
 
 
-           // z.push_back({posx,posy,posz});
-
-       // qDebug()<<jud;
-
     }
-//    else if(ev->button()==Qt::LeftButton)
-//    {
-//        pp[num_point_bei].x=((float)ev->pos().x()/(this->width()))*2-1;
-//        pp[num_point_bei].y=-((((float)ev->pos().y())/(this->height()))*2-1);
-//        num_point_bei++;
-//        bei_num++;
-//        //jud = 0;//9.47
-//    }
+
     else if(ev->button()==Qt::RightButton&&erase!=1)
     {
         erase = 1;
@@ -933,45 +914,6 @@ void Openglwidget::mousePressEvent(QMouseEvent *ev)
        // qDebug()<<jud;
     }
 }
-void Openglwidget::keyPressEvent(QKeyEvent *event)
-{
-    switch(event->key()){
-    case Qt::Key_N:
-        if(event->isAutoRepeat()&&!PressFlag){  //长按
-            PressFlag=true; //长按flag
-            //此处添加长按需要实现的代码;
-            long_press = 1;
-//            qDebug()<<"N LONG";
-        }
-        if(!PressFlag){ //按下
-//            qDebug()<<"N down";
-        }
-        break;
-    default: break;
-    }
-    QWidget::keyPressEvent(event);
-}
-
-void Openglwidget::keyReleaseEvent(QKeyEvent *event)
-{
-    switch(event->key())
-    {
-    case Qt::Key_N:
-// qDebug()<<event->isAutoRepeat();    //长按的话会一直进出此函数，长按进来的话是true ，不是或最后一次弹起是false
-        if(!PressFlag&&!event->isAutoRepeat()){ //
-            //此处写短按需要实现的代码;
-          //  qDebug()<<"N short up";
-        }else if(PressFlag&&!event->isAutoRepeat()){
-            PressFlag=false;
-            //qDebug()<<"N long up";
-        }
-
-        break;
-    default: break;
-    }
-}
-
-
 void Openglwidget::mouseMoveEvent(QMouseEvent *ev)
 {
 
@@ -1111,15 +1053,6 @@ void Openglwidget::mouseReleaseEvent(QMouseEvent *ev)
 {
 
 }
-//void Openglwidget::display()
-//{
-//    glClear(GL_COLOR_BUFFER_BIT);
-//       for (int i = 0; i < num_point; i++)
-//       {
-//           paintGL();
-//       }
-
-//}
 void Openglwidget::resizeGL(int w,int h)
 {
 
